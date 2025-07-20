@@ -1,0 +1,17 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxfSwiaWF0IjoxNzIzMDI3NjQ4LCJleHAiOjMyOTk4Mjc2NDgsImlzcyI6ImllYXRpbmcifQ.b4PyRbkqaCP9cjhIMpICoU7z_szGK4Zy-GVwyKfXrdI"
+    },
+    "local": {
+      "host": "http://localhost:3000/v1",
+      "token": "{{$shared token}}"
+    },
+    "production": {
+      "host": "https://api.astrovibe.ru/v1",
+      "token": "{{$shared token}}"
+    }
+  }
+}

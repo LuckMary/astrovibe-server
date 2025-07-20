@@ -1,0 +1,10 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "extends": ["eslint:recommended", "plugin:node/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-extra-semi": "off"
+  }
+}

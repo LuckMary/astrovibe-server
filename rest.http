@@ -1,0 +1,76 @@
+# PYTHAGORAS
+
+### get matrix
+
+GET {{host}}/pythagoras?date=02/07/2003
+
+# AUTH
+
+### register
+
+PUT {{host}}/auth/local
+content-type: application/json
+
+{
+  "email": "vladzadvorny@outlook.com",
+  "name": "Vlad",
+  "password": "Meow123!",
+  "passwordConfirm": "Meow123!"
+}
+
+### login
+
+POST {{host}}/auth/local
+content-type: application/json
+
+{
+  "email": "vladzadvorny@outlook.com",
+  "password": "Meow123!"
+}
+
+### recovery
+
+PATCH {{host}}/auth/local
+content-type: application/json
+
+{
+  "email": "vladzadvorny@outlook.com"
+}
+
+# ME
+### get me
+GET {{host}}/me
+Authorization: Bearer {{token}}
+
+# POSTS
+### add post
+POST {{host}}/posts
+Authorization: Bearer {{token}}
+content-type: application/json
+
+{
+  "title": "Привет, ёлка!",
+  "body": [
+    {
+      "id": "1tcm",
+      "type": "text",
+      "body": "Какой-нибудь текст..."
+    },
+    {
+      "id": "94me",
+      "type": "image",
+      "body": {
+        "id": 13,
+        "path": "/o/6/lznrbeiu.png"
+      }
+    }
+  ],
+  "status": "published",
+  "tags": [18,17]
+}
+
+### get posts
+GET {{host}}/posts?page=2
+
+### get one post
+GET {{host}}/posts/привет-ёлка-9

@@ -1,0 +1,16 @@
+{
+  "ignore": ["node_modules"],
+  "env": {
+    "NODE_ENV": "development",
+    "PORT": 3000,
+    "DB_NAME": "astrovibe",
+    "DB_USER": "hello",
+    "DB_PASSWORD": "world",
+    "DB_HOST": "localhost",
+    "DB_PORT": 3306,
+    "UPLOADS_DESTINATION": "./uploads"
+  },
+  "watch": "./",
+  "ext": ".js,.json",
+  "exec": "node ./src/app.js"
+}
